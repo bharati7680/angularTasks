@@ -1,12 +1,79 @@
-[class^="box-"] {
+[class ^="box-"] {
     background-color: skyblue;
     display: grid;
+    place-items: center;
 }
 
-.contailner{
-   
+//* parent properties 
+
+.container{
     display: grid;
-    gap: 20px; //! grid property
+    height: 100vh;
+    grid-gap: 25px; 
+    // column-gap: 10px;
+    // row-gap: 10px;
+    grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+    // grid-template: repeat(2, 100px)/repeat(2, 100px); // ! row / column
+    // grid-template: 200px 300px/ 50px 300px; // ! row / column
+    // grid-template-columns: 100px 100px auto 300px;
+    // grid-template-rows: 200px 100px auto 50px; 
+    // grid-template-areas: "A A A A   A A A A   A A A A"
+    //                      "B B B B   B B B B   B B C C"
+    //                      "B B B B   B B B B   B B C C";
+    //! both for x-axis
+    // justify-items: end; // ? in x-axis (only child)
+    // justify-content: end; // ? in container (parent and child)
+    //! both for y-axis 
+    // align-items: start; //? in y-axis (only child)
+    // align-content: space-between ; // ? in container (parent and child)
 
+    //! justify-items and align-items
+    // place-items: center;
 
+     //! justify-items and align-items
+    //  place-content: space-between;
 }
+
+// .box-1{
+//     grid-area: A;
+// }
+// .box-2{
+//     grid-area: B;
+// }
+// .box-3{
+//     grid-area: C;
+
+// }
+// .box-4{
+//     grid-area: D;
+    
+// }
+
+// * children properties
+
+.box-1{
+    // grid-column-start:1;
+    // grid-column-end: 12;
+    // grid-column: 1/13;
+    // grid-column: span 12;
+
+    // grid-row-start: 1 ;
+    // grid-row-end: 13;
+    // grid-row: 1/13;
+    // grid-row: span 12;
+}
+.box-2{
+    // justify-self: center ; // ! moves on x-axis
+    // align-self: center ;  //! moves on y-axis
+    place-self: center ; //! shorthand of above both
+    
+}
+// .box-3{
+//     grid-area: C;
+
+// }
+// .box-4{
+//     grid-area: D;
+    
+// }
+// 
